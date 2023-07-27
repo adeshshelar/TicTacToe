@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style>
+        *,*::before,*::after{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins','sans-serif';
+        }
+
+        .wrapper{
+            background-image: url(bg3.jpg);
+            width: 100vw;
+            height: 100vh;
+            background-size: cover;
+            display: grid;
+            place-items: center;
+        }
+
+        .game-info{
+            color: white;
+            position: absolute;
+            top: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(215, 215, 215, 0.15);
+            border: 1px solid gray;
+            border-radius: 2rem;
+            padding: 0.5rem 3rem;
+
+        }
+
+        .tic-tac-toe{
+            width: 90%;
+            max-width: 20rem;
+            background-color: rgba(215, 215, 215, 0.15);
+            border-radius: 1rem;
+            border: 1px solid gray;
+            padding: 5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            aspect-ratio: 1/1;
+            
+
+        }
+
+        .box{
+            position: relative;
+            
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 3rem;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box1, .box2, .box4, .box5{
+            border-right: 3px solid white;
+            border-bottom: 3px solid white;
+        }
+
+        .box3, .box6{
+            border-bottom: 3px solid white;
+        }
+
+        .box7, .box8{
+            border-right: 3px solid white;
+        }
+
+        .btn{
+            position: absolute;
+            color: white;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(215, 215, 215, 0.15);
+            border-radius: 1rem;
+            border: 1px solid gray;
+            padding: 0.5rem 2rem;
+            cursor: pointer;
+        }
+
+        .btn:hover{
+            color: red;
+        }
+
+        .btn.active{
+            display: flex;
+        }
+
+        .win{
+            background-color: black;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <p class="game-info"></p>
+
+        <div class="tic-tac-toe">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+            <div class="box box5"></div>
+            <div class="box box6"></div>
+            <div class="box box7"></div>
+            <div class="box box8"></div>
+            <div class="box box9"></div>
+        </div>
+
+        <button class="btn">New Game</button>
+        
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
